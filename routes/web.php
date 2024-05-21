@@ -14,7 +14,23 @@ use App\Http\Controllers\HomeController;
 */
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::get('/test', function(){
+    $servername = "localhost";
+    $username = "test";
+    $password = "test";
+    
+    // Create connection
+    $conn = new mysqli($servername, $username, $password);
+    
+    // Check connection
+    if ($conn->connect_error) {
+      die("Connection failed: " . $conn->connect_error);
+    }
+    echo "Connected successfully";
+})->name('test');
 
 Route::fallback(function(){
     return redirect()->route('home');
 });
+
+

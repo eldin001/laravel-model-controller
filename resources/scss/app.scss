@@ -9,6 +9,21 @@ $fa-font-path: "../webfonts" !default;
 
 @import '~bootstrap/scss/bootstrap';
 
-h1 {
-    color: $text-color;
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
+}
+
+.cards {
+    display: inline;
+    height: 300px;
+    width: 200px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+img {
+    max-width: 100%;
+    max-height: 100%;
 }
